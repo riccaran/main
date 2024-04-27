@@ -8,16 +8,14 @@ body, h1, ul, li, a {
 body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
-    margin: 0;
-    padding: 0;
-    background: #f4f4f4;
+    background: linear-gradient(to right, #f4f4f4, #e4e4e4);
     color: #333;
 }
 
 header {
-    background: #005A9C;
+    background: linear-gradient(to right, #007ACC, #005A9C);
     color: #ffffff;
-    padding: 10px 20px;
+    padding: 20px;
     text-align: center;
 }
 
@@ -26,6 +24,8 @@ nav ul {
     background: #333;
     text-align: center;
     padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
 
 nav ul li {
@@ -36,13 +36,20 @@ nav ul li a {
     color: white;
     padding: 10px 20px;
     display: inline-block;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover, nav ul li a:focus {
+    background-color: #555;
+    border-radius: 5px;
 }
 
 footer {
     text-align: center;
-    padding: 10px 0;
+    padding: 20px 0;
     background: #333;
     color: #fff;
+    box-shadow: 0 -2px 5px rgba(0,0,0,0.2);
 }
 
 footer p {
