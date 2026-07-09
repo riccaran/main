@@ -1,16 +1,18 @@
 :root {
-    --ink: #101216;
-    --muted: #626a73;
-    --line: #d9dee5;
-    --paper: #f7f8f5;
-    --white: #ffffff;
-    --carbon: #161a1d;
-    --green: #18a777;
-    --teal: #087f8c;
-    --blue: #315cfd;
-    --amber: #f7b731;
-    --coral: #e65d4f;
-    --shadow: 0 18px 60px rgba(16, 18, 22, 0.16);
+    --ink: #f1f5f2;
+    --muted: #9ba8b2;
+    --line: rgba(255, 255, 255, 0.12);
+    --paper: #07090d;
+    --white: #f7fbf7;
+    --carbon: #0b0f14;
+    --panel: #111821;
+    --panel-soft: #151f28;
+    --green: #63f2c7;
+    --teal: #36d0c4;
+    --blue: #86a8ff;
+    --amber: #f6c96f;
+    --coral: #ff7e6e;
+    --shadow: 0 22px 70px rgba(0, 0, 0, 0.42);
 }
 
 * {
@@ -28,6 +30,7 @@ body {
     background: var(--paper);
     line-height: 1.55;
     overflow-x: hidden;
+    color-scheme: dark;
 }
 
 img {
@@ -46,8 +49,8 @@ a {
     left: 24px;
     z-index: 20;
     padding: 10px 14px;
-    background: var(--white);
-    color: var(--ink);
+    background: var(--panel);
+    color: var(--white);
     border: 1px solid var(--line);
     border-radius: 8px;
 }
@@ -66,8 +69,8 @@ a {
     gap: 24px;
     width: 100%;
     padding: 16px clamp(20px, 5vw, 72px);
-    background: rgba(247, 248, 245, 0.92);
-    border-bottom: 1px solid rgba(16, 18, 22, 0.08);
+    background: rgba(7, 9, 13, 0.88);
+    border-bottom: 1px solid var(--line);
     backdrop-filter: blur(18px);
 }
 
@@ -85,8 +88,9 @@ a {
     width: 38px;
     height: 38px;
     border-radius: 8px;
-    background: var(--carbon);
+    background: var(--panel-soft);
     color: var(--white);
+    border: 1px solid var(--line);
     font-size: 0.82rem;
 }
 
@@ -105,7 +109,7 @@ a {
 
 .nav-links a:hover,
 .nav-links a:focus-visible {
-    color: var(--ink);
+    color: var(--white);
 }
 
 .hero {
@@ -116,7 +120,7 @@ a {
     overflow: hidden;
     isolation: isolate;
     background-image:
-        linear-gradient(90deg, rgba(16, 18, 22, 0.9), rgba(16, 18, 22, 0.58) 46%, rgba(16, 18, 22, 0.14)),
+        linear-gradient(90deg, rgba(5, 7, 10, 0.97), rgba(5, 7, 10, 0.78) 48%, rgba(5, 7, 10, 0.28)),
         url("https://raw.githubusercontent.com/riccaran/BioNetTherapy/main/output/bc_related_core.png");
     background-repeat: no-repeat;
     background-position: center, 42% center;
@@ -161,9 +165,9 @@ p {
 
 h1 {
     margin-bottom: 20px;
-    max-width: 780px;
-    font-size: clamp(3rem, 8vw, 6.6rem);
-    line-height: 0.94;
+    max-width: 860px;
+    font-size: clamp(2.5rem, 6.4vw, 5rem);
+    line-height: 0.98;
     font-weight: 800;
     letter-spacing: 0;
 }
@@ -201,8 +205,8 @@ h1 {
 }
 
 .button.primary {
-    background: var(--white);
-    color: var(--ink);
+    background: var(--green);
+    color: #06110d;
 }
 
 .button.secondary {
@@ -213,7 +217,7 @@ h1 {
 .contact-section .button.secondary {
     border-color: var(--line);
     color: var(--ink);
-    background: var(--white);
+    background: var(--panel);
 }
 
 .hero-summary {
@@ -256,7 +260,7 @@ h1 {
     grid-template-columns: minmax(0, 1fr) auto;
     gap: 28px;
     align-items: center;
-    background: var(--white);
+    background: var(--carbon);
     border-bottom: 1px solid var(--line);
 }
 
@@ -280,7 +284,7 @@ h1 {
     padding: 14px;
     border: 1px solid var(--line);
     border-radius: 8px;
-    background: var(--paper);
+    background: var(--panel);
 }
 
 .profile-chip img {
@@ -337,14 +341,14 @@ h1 {
     padding: 24px;
     border: 1px solid var(--line);
     border-radius: 8px;
-    background: var(--white);
-    box-shadow: 0 1px 0 rgba(16, 18, 22, 0.05);
+    background: var(--panel);
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.03);
 }
 
 .project-card.featured {
-    background: var(--carbon);
+    background: #102019;
     color: var(--white);
-    border-color: var(--carbon);
+    border-color: rgba(99, 242, 199, 0.28);
     box-shadow: var(--shadow);
 }
 
@@ -390,8 +394,8 @@ h1 {
     min-height: 30px;
     padding: 6px 10px;
     border-radius: 999px;
-    background: #eef2f0;
-    color: #334039;
+    background: rgba(255, 255, 255, 0.08);
+    color: #d8e9e3;
     font-size: 0.82rem;
     font-weight: 750;
 }
@@ -416,7 +420,7 @@ h1 {
 }
 
 .focus-section {
-    background: var(--carbon);
+    background: #05070a;
     color: var(--white);
 }
 
@@ -424,14 +428,14 @@ h1 {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 1px;
-    background: rgba(255, 255, 255, 0.18);
-    border: 1px solid rgba(255, 255, 255, 0.18);
+    background: var(--line);
+    border: 1px solid var(--line);
 }
 
 .focus-item {
     min-height: 270px;
     padding: 24px;
-    background: var(--carbon);
+    background: var(--panel);
 }
 
 .focus-number {
@@ -462,14 +466,14 @@ figure {
     overflow: hidden;
     border: 1px solid var(--line);
     border-radius: 8px;
-    background: var(--white);
+    background: var(--panel);
 }
 
 figure img {
     width: 100%;
     height: clamp(320px, 42vw, 560px);
     object-fit: cover;
-    background: var(--white);
+    background: var(--panel);
 }
 
 figcaption {
@@ -485,7 +489,7 @@ figcaption {
     grid-template-columns: minmax(260px, 420px) minmax(0, 1fr);
     gap: 36px;
     align-items: start;
-    background: var(--white);
+    background: var(--carbon);
     border-top: 1px solid var(--line);
     border-bottom: 1px solid var(--line);
 }
@@ -508,8 +512,8 @@ figcaption {
 }
 
 .contact-section .button.primary {
-    background: var(--carbon);
-    color: var(--white);
+    background: var(--green);
+    color: #06110d;
 }
 
 .site-footer {
