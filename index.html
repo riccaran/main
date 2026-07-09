@@ -3,50 +3,296 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <meta name="description" content="Portfolio of Riccardo Carangelo, MSc Data Science student focused on computational biology, bioinformatics, network biology, and AI-assisted biological research.">
+    <meta property="og:title" content="Riccardo Carangelo | Computational Biology Portfolio">
+    <meta property="og:description" content="Selected projects in network biology, structural bioinformatics, protein analysis, and scientific machine learning.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://raw.githubusercontent.com/riccaran/BioNetTherapy/main/output/bc_related_core.png">
+    <title>Riccardo Carangelo | Computational Biology Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>Research Projects</h1>
-    </header>
-    <main>
+    <a class="skip-link" href="#selected-work">Skip to projects</a>
 
-        <section class="introduction">
-            <p>This site is dedicated to present some computational biology project performed using data analysis and data science tools applied to molecular biology.</p>
+    <header class="site-header" aria-label="Primary navigation">
+        <a class="brand" href="#top" aria-label="Riccardo Carangelo home">
+            <span class="brand-mark">RC</span>
+            <span>Riccardo Carangelo</span>
+        </a>
+        <nav class="nav-links">
+            <a href="#selected-work">Work</a>
+            <a href="#focus">Focus</a>
+            <a href="#evidence">Evidence</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <main id="top">
+        <section class="hero" aria-labelledby="hero-title">
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <p class="eyebrow">Data Science @ UniPD · Computational Biology · Bioinformatics</p>
+                <h1 id="hero-title">Riccardo Carangelo</h1>
+                <p class="hero-copy">
+                    I design data-driven workflows for biological research, connecting molecular structure,
+                    network science, and machine learning into reproducible analysis projects.
+                </p>
+                <div class="hero-actions" aria-label="Main links">
+                    <a class="button primary" href="#selected-work">View selected work</a>
+                    <a class="button secondary" href="https://github.com/riccaran">GitHub profile</a>
+                </div>
+            </div>
+            <div class="hero-summary" aria-label="Research focus summary">
+                <span>Network biology</span>
+                <span>Protein structure</span>
+                <span>Scientific ML</span>
+            </div>
         </section>
 
-        <div class="grid-container">
-            <div class="card" style="background-image: url('image1.jpg');">
-                <a href="https://riccaran.github.io/BioNetTherapy/">
-                    <h2>BioNetTherapy</h2>
-                    <p class="description">Explore this project about biological network therapies.</p>
-                </a>
+        <section class="intro-band" aria-label="Profile summary">
+            <div class="intro-copy">
+                <p>
+                    My work sits between biological questions and computational systems: notebooks, pipelines,
+                    network models, protein renderings, and reports built to make complex biological data easier
+                    to inspect, reproduce, and explain.
+                </p>
             </div>
-            <div class="card" style="background-image: url('image2.jpg');">
-                <a href="https://riccaran.github.io/ProteinDomainPredictor/">
-                    <h2>ProteinDomainPredictor</h2>
-                    <p class="description">Predict protein domains with our advanced AI models.</p>
-                </a>
+            <div class="profile-chip">
+                <img src="https://avatars.githubusercontent.com/u/156467650?v=4" alt="GitHub avatar of Riccardo Carangelo">
+                <div>
+                    <strong>Riccardo</strong>
+                    <span>AI developer and bioinformatics specialist</span>
+                </div>
             </div>
-            <div class="card" style="background-image: url('image3.jpg');">
-                <a href="https://riccaran.github.io/MutagenesisPipeline/">
-                    <h2>MutagenesisPipeline</h2>
-                    <p class="description">Automate your mutagenesis experiments efficiently.</p>
-                </a>
+        </section>
+
+        <section class="section" id="selected-work" aria-labelledby="selected-work-title">
+            <div class="section-heading">
+                <p class="eyebrow">Selected work</p>
+                <h2 id="selected-work-title">Projects with a biological research core</h2>
+                <p>
+                    A focused collection of repositories around therapeutic networks, protein dynamics,
+                    domain prediction, molecular modelling, and optimization methods.
+                </p>
             </div>
-            <div class="card" style="background-image: url('image4.jpg');">
-                <a href="https://riccaran.github.io/ProteinMotionMaps/">
-                    <h2>ProteinMotionMaps</h2>
-                    <p class="description">Visualize protein movements in dynamic maps.</p>
-                </a>
+
+            <div class="project-grid">
+                <article class="project-card featured">
+                    <div class="project-meta">
+                        <span>Network science</span>
+                        <span>Jupyter Notebook</span>
+                    </div>
+                    <h3>BioNetTherapy</h3>
+                    <p>
+                        Identification of functional protein complexes as potential therapeutic targets in
+                        breast cancer through a network-science workflow.
+                    </p>
+                    <div class="tag-row">
+                        <span>NetworkX</span>
+                        <span>Biological networks</span>
+                        <span>Breast cancer</span>
+                    </div>
+                    <div class="link-row">
+                        <a href="https://github.com/riccaran/BioNetTherapy">Repository</a>
+                        <a href="https://riccaran.github.io/BioNetTherapy/">Project page</a>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-meta">
+                        <span>Structural bioinformatics</span>
+                        <span>Python</span>
+                    </div>
+                    <h3>ProteinMotionMaps</h3>
+                    <p>
+                        Mapping structural clusters in molecular dynamics trajectories with Residue Interaction
+                        Networks, animations, and protein contact analysis.
+                    </p>
+                    <div class="tag-row">
+                        <span>RINs</span>
+                        <span>Molecular dynamics</span>
+                        <span>Visualization</span>
+                    </div>
+                    <div class="link-row">
+                        <a href="https://github.com/riccaran/ProteinMotionMaps">Repository</a>
+                        <a href="https://riccaran.github.io/ProteinMotionMaps/">Project page</a>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-meta">
+                        <span>Protein analysis</span>
+                        <span>Jupyter Notebook</span>
+                    </div>
+                    <h3>ProteinDomainPredictor</h3>
+                    <p>
+                        A workflow to predict and characterize a protein domain family starting from a single
+                        sequence, with supporting files and a research report.
+                    </p>
+                    <div class="tag-row">
+                        <span>Sequence analysis</span>
+                        <span>Domains</span>
+                        <span>Reports</span>
+                    </div>
+                    <div class="link-row">
+                        <a href="https://github.com/riccaran/ProteinDomainPredictor">Repository</a>
+                        <a href="https://riccaran.github.io/ProteinDomainPredictor/">Project page</a>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-meta">
+                        <span>Molecular modelling</span>
+                        <span>Research report</span>
+                    </div>
+                    <h3>MutagenesisPipeline</h3>
+                    <p>
+                        A ricin mutagenesis proposal project with structural files, visual inspection output,
+                        and a compact report-oriented workflow.
+                    </p>
+                    <div class="tag-row">
+                        <span>PDB</span>
+                        <span>Mutagenesis</span>
+                        <span>Protein rendering</span>
+                    </div>
+                    <div class="link-row">
+                        <a href="https://github.com/riccaran/MutagenesisPipeline">Repository</a>
+                        <a href="https://riccaran.github.io/MutagenesisPipeline/">Project page</a>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-meta">
+                        <span>Drug discovery</span>
+                        <span>Jupyter Notebook</span>
+                    </div>
+                    <h3>VirtualScreening</h3>
+                    <p>
+                        Molecular structure and virtual-screening experiments around protein-ligand data,
+                        docking preparation, and exploratory notebooks.
+                    </p>
+                    <div class="tag-row">
+                        <span>Docking</span>
+                        <span>PDB</span>
+                        <span>MOL2</span>
+                    </div>
+                    <div class="link-row">
+                        <a href="https://github.com/riccaran/VirtualScreening">Repository</a>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-meta">
+                        <span>Optimization</span>
+                        <span>Machine learning</span>
+                    </div>
+                    <h3>Optimization labs</h3>
+                    <p>
+                        Implementations and notebooks around Frank-Wolfe methods, gradient descent, and
+                        semi-supervised labelling experiments.
+                    </p>
+                    <div class="tag-row">
+                        <span>Frank-Wolfe</span>
+                        <span>Gradient descent</span>
+                        <span>Recommenders</span>
+                    </div>
+                    <div class="link-row">
+                        <a href="https://github.com/riccaran/frank_wolfe">Frank-Wolfe</a>
+                        <a href="https://github.com/riccaran/gradient_descent">Gradient descent</a>
+                    </div>
+                </article>
             </div>
-        </div>
+        </section>
+
+        <section class="focus-section" id="focus" aria-labelledby="focus-title">
+            <div class="section-heading compact">
+                <p class="eyebrow">Focus</p>
+                <h2 id="focus-title">What I like to build</h2>
+            </div>
+            <div class="focus-grid">
+                <div class="focus-item">
+                    <span class="focus-number">01</span>
+                    <h3>Computational biology workflows</h3>
+                    <p>Project structures that keep notebooks, datasets, reports, and generated outputs readable.</p>
+                </div>
+                <div class="focus-item">
+                    <span class="focus-number">02</span>
+                    <h3>Network-based biological reasoning</h3>
+                    <p>Graph representations that help inspect biological systems, functional modules, and candidate targets.</p>
+                </div>
+                <div class="focus-item">
+                    <span class="focus-number">03</span>
+                    <h3>Protein structure and sequence analysis</h3>
+                    <p>Visual and analytical tools for molecular structures, domains, interactions, and dynamics.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section evidence" id="evidence" aria-labelledby="evidence-title">
+            <div class="section-heading">
+                <p class="eyebrow">Visual evidence</p>
+                <h2 id="evidence-title">Real outputs from the repositories</h2>
+                <p>
+                    The portfolio uses generated outputs from the public projects so visitors can see the type
+                    of scientific work behind the code.
+                </p>
+            </div>
+            <div class="media-grid">
+                <figure>
+                    <img src="https://raw.githubusercontent.com/riccaran/BioNetTherapy/main/output/bc_related_core.png" alt="Network visualization from the BioNetTherapy project">
+                    <figcaption>BioNetTherapy network visualization</figcaption>
+                </figure>
+                <figure>
+                    <img src="https://raw.githubusercontent.com/riccaran/MutagenesisPipeline/main/ex_im.png" alt="Protein-ligand rendering from the MutagenesisPipeline project">
+                    <figcaption>MutagenesisPipeline molecular rendering</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <section class="toolbox" aria-labelledby="toolbox-title">
+            <div>
+                <p class="eyebrow">Toolbox</p>
+                <h2 id="toolbox-title">Languages, libraries, and working style</h2>
+            </div>
+            <div class="tool-list" aria-label="Technical skills">
+                <span>Python</span>
+                <span>R</span>
+                <span>SQL</span>
+                <span>Jupyter</span>
+                <span>PyTorch</span>
+                <span>TensorFlow</span>
+                <span>Keras</span>
+                <span>scikit-learn</span>
+                <span>BioPython</span>
+                <span>NetworkX</span>
+                <span>Pandas</span>
+                <span>Scientific reporting</span>
+            </div>
+        </section>
+
+        <section class="contact-section" id="contact" aria-labelledby="contact-title">
+            <div>
+                <p class="eyebrow">Contact</p>
+                <h2 id="contact-title">Open to research-minded collaborations</h2>
+                <p>
+                    The best starting point is a concrete biological question, a dataset, or a project that needs
+                    clearer computational structure.
+                </p>
+            </div>
+            <div class="contact-actions">
+                <a class="button primary" href="mailto:riccaran@gmail.com">Email</a>
+                <a class="button secondary" href="https://www.linkedin.com/in/riccaran/">LinkedIn</a>
+                <a class="button secondary" href="https://github.com/riccaran">GitHub</a>
+            </div>
+        </section>
     </main>
-    <footer>
-        <p>© 2024 Riccardo Carangelo. All rights reserved.</p>
-        <p>Contact: <a href="mailto:riccaran@gmail.com">riccaran@gmail.com</a></p>
+
+    <footer class="site-footer">
+        <p>© 2026 Riccardo Carangelo</p>
+        <p>Computational biology, bioinformatics, and data science portfolio.</p>
     </footer>
 </body>
 </html>
