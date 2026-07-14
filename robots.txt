@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://riccaran.github.io/main/sitemap.xml
