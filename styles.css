@@ -131,9 +131,10 @@ p {
 
 .scroll-progress span {
     display: block;
-    width: calc(var(--scroll-progress, 0) * 100%);
+    width: 100%;
     height: 100%;
     background: var(--mint);
+    transform: scaleX(var(--scroll-progress, 0));
     transform-origin: left center;
 }
 
@@ -337,7 +338,7 @@ p {
 .hero h1 {
     max-width: 650px;
     margin-bottom: 22px;
-    font-size: clamp(3rem, 6vw, 4.3rem);
+    font-size: clamp(3rem, 5.6vw, 4rem);
     font-weight: 700;
     letter-spacing: 0;
     line-height: 1.02;
@@ -482,7 +483,7 @@ p {
 .section {
     width: min(calc(100% - 40px), var(--max-width));
     margin: 0 auto;
-    padding: clamp(76px, 10vw, 132px) 0;
+    padding: clamp(72px, 8.5vw, 112px) 0;
 }
 
 .section-kicker h2,
@@ -490,7 +491,7 @@ p {
 .toolbox-heading h2,
 .contact-section h2 {
     margin-bottom: 0;
-    font-size: clamp(2rem, 4.2vw, 3.45rem);
+    font-size: clamp(2rem, 3.8vw, 3.15rem);
     font-weight: 650;
     letter-spacing: 0;
     line-height: 1.08;
@@ -554,6 +555,14 @@ p {
 .profile-row a {
     margin-top: 5px;
     color: var(--cyan);
+}
+
+.profile-row a,
+.project-links a,
+.text-link {
+    display: inline-flex;
+    min-height: 32px;
+    align-items: center;
 }
 
 .work-section {
@@ -635,6 +644,8 @@ p {
 }
 
 .project-card {
+    --project-accent: var(--mint);
+    --project-accent-border: rgba(104, 239, 198, 0.34);
     position: relative;
     display: flex;
     min-width: 0;
@@ -645,6 +656,26 @@ p {
     background: var(--surface);
     box-shadow: 0 1px 0 rgba(255, 255, 255, 0.02);
     transition: border-color 180ms ease, transform 180ms ease, box-shadow 180ms ease;
+}
+
+.project-card[data-category="structure"] {
+    --project-accent: var(--cyan);
+    --project-accent-border: rgba(97, 189, 232, 0.38);
+}
+
+.project-card[data-category="methods"] {
+    --project-accent: var(--amber);
+    --project-accent-border: rgba(242, 199, 109, 0.38);
+}
+
+.project-card::before {
+    position: absolute;
+    inset: 0 0 auto;
+    z-index: 2;
+    height: 2px;
+    background: var(--project-accent);
+    content: "";
+    opacity: 0.72;
 }
 
 .project-wide {
@@ -673,7 +704,7 @@ p {
 
 @media (hover: hover) {
     .project-card:hover {
-        border-color: rgba(104, 239, 198, 0.34);
+        border-color: var(--project-accent-border);
         box-shadow: var(--shadow);
         transform: translateY(-3px);
     }
@@ -756,7 +787,20 @@ p {
 }
 
 .project-number {
-    color: var(--mint);
+    color: var(--project-accent);
+}
+
+.project-card h3 a {
+    transition: color 160ms ease;
+}
+
+.project-card h3 a:hover,
+.project-card h3 a:focus-visible {
+    color: var(--project-accent);
+}
+
+.project-visual:focus-visible {
+    outline-offset: -3px;
 }
 
 .project-card h3 {
@@ -969,7 +1013,7 @@ p {
 .approach-inner {
     width: min(calc(100% - 40px), var(--max-width));
     margin: 0 auto;
-    padding: clamp(76px, 10vw, 124px) 0;
+    padding: clamp(72px, 8.5vw, 108px) 0;
 }
 
 .approach-inner .section-kicker {
@@ -1072,7 +1116,7 @@ p {
 .contact-inner {
     width: min(calc(100% - 40px), var(--max-width));
     margin: 0 auto;
-    padding: clamp(76px, 10vw, 120px) 0;
+    padding: clamp(72px, 8.5vw, 108px) 0;
 }
 
 .contact-inner > p:not(.eyebrow):not(.copy-status) {
@@ -1092,6 +1136,10 @@ p {
     color: var(--mint);
     font-family: "IBM Plex Mono", monospace;
     font-size: 0.7rem;
+}
+
+.copy-email {
+    min-width: 108px;
 }
 
 .site-footer {
@@ -1397,6 +1445,7 @@ p {
 
     .contact-actions .text-link {
         margin: 6px 0 0;
+        min-height: 44px;
     }
 
     .site-footer {
